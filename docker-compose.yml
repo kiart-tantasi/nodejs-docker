@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  mysqlhost:
+    image: mysql:5.7.12
+    ports:
+      - '3306:3306'
+    volumes:
+      - randomvolume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: random
+volumes:
+  randomvolume:
